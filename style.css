@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 1200px;
+  margin:0 auto;
+  position:relative;
+  max-width:100%;
+  text-align:center;
+}
+
+#date {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font: 900 24px/40px Arial, Helvetica, Verdana, sans-serif;
+  text-align: center;
+  color:#0f0;
+}
+
+#date span {
+  display:inline-block;
+  width:200px;
+  background:#333;
+}
+span:first-child{
+  padding-top:10px;
+}
+span:last-child{
+  padding-bottom:10px;
+}
