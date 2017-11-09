@@ -15,14 +15,15 @@ const server = http.createServer((req, res) => {
     ];
 
     function isAssets(reqUrl) {
-        let i = 0;
-        assets.forEach(function (word) {
-            i = i + reqUrl.includes(word);
-        });
-        return (i === 1);
+        for (let i = 0; i < assets.length; i++) {
+            let isA = reqUrl.includes(assets[i]) ? true:false;
+            if (isA) {
+                return isA;
+            }
+        }
     }
 
-    if (isAssets(req.url)) { // проверяем соответствие url запроса
+    if (isAssets(req.url) === true) { // проверяем соответствие url запроса
         const asset = req
             .url
             .substring(req.url.lastIndexOf('/') + 1);
