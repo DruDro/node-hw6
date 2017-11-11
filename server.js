@@ -16,7 +16,7 @@ const server = http.createServer((req, res) => {
 
     function isAssets(reqUrl) {
         for (let i = 0; i < assets.length; i++) {
-            let isA = reqUrl.includes(assets[i]) ? true:false;
+            let isA = reqUrl.includes(assets[i]);
             if (isA) {
                 return isA;
             }
